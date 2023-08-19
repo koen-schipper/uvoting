@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (prefers-color-scheme: light) {
+    .custom-border {
+        border-image-source: linear-gradient(to bottom, rgba(50,138,241,.22), rgba(99,123,255,0));
+        border-image-slice: 1;
+        background-image: linear-gradient(to bottom, #fff, #fff), linear-gradient(to bottom, rgba(50,138,241,.22), rgba(99,123,255,0));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .custom-border {
+        border-image-source: linear-gradient(to bottom, rgba(50,138,241,.22), rgba(99,123,255,0));
+        border-image-slice: 1;
+        background-image: linear-gradient(to bottom, rgb(64, 64, 64), rgb(64, 64, 64)), linear-gradient(to bottom, rgba(50,138,241,.22), rgba(99,123,255,0));
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+}
